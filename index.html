@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediLab Plus - Next Gen Diagnostics</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="navbar">
+        <div class="container">
+            <nav>
+                <div class="logo-container" style="display: flex; flex-direction: column;">
+                    <div class="logo">MediLab+</div>
+                    <span
+                        style="font-size: 0.75rem; color: var(--text-muted); font-style: italic; margin-top: -5px;">"Empowering
+                        Health with Precision."</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div style="display: flex; align-items: center;">
+                    <button class="nav-theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
+                        <span class="icon-sun">☀️</span>
+                        <span class="icon-moon">🌙</span>
+                    </button>
+                    <a href="admin/login.html" class="btn btn-primary">Admin Portal</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container" style="display: flex; align-items: center;">
+            <div class="hero-content animate-slide-in">
+                <h1>Future of<br>Medical Diagnostics</h1>
+                <p>Advanced laboratory testing with AI-powered accuracy. Get your results faster, clearer, and more
+                    accessible than ever before.</p>
+                <a href="#services" class="btn btn-primary">Book a Test</a>
+                <a href="#contact" class="btn"
+                    style="margin-left: 10px; border: 2px solid var(--primary); color: var(--primary);">Contact Us</a>
+            </div>
+            <div class="hero-image animate-float">
+                <!-- Using a placeholder for now, ideally generated via tool -->
+                <div
+                    style="width: 100%; height: 400px; background: linear-gradient(45deg, #e0e7ff, #f3e8ff); border-radius: 30px; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 5rem;">🔬</span>
+                </div>
+
+                <div class="floating-badge badge-1 glass-card">
+                    <span style="color: var(--success); font-size: 1.5rem;">✔</span>
+                    <div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">Accuracy</div>
+                        <div>99.9%</div>
+                    </div>
+                </div>
+
+                <div class="floating-badge badge-2 glass-card">
+                    <span style="color: var(--warning); font-size: 1.5rem;">⚡</span>
+                    <div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">Speed</div>
+                        <div>24h Reports</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <!-- Sorted by Price (Low to High) -->
+                <div class="service-card" onclick="toggleService(this, 'Fasting Blood Sugar', 600)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🩸</div>
+                    <h3>Fasting Sugar</h3>
+                    <p>FBS Diabetes check.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 600</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Urine Full Report', 800)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🔬</div>
+                    <h3>Urine Full Report</h3>
+                    <p>Basic urinalysis (UFR).</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 800</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Stool Analysis', 1200)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🦠</div>
+                    <h3>Stool Culture</h3>
+                    <p>Digestive system infection check.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 1,200</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Complete Blood Count (CBC)', 1500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🩸</div>
+                    <h3>Blood Tests (CBC)</h3>
+                    <p>Full blood count analysis.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 1,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'CRP Test', 1800)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🧪</div>
+                    <h3>CRP Test</h3>
+                    <p>C-Reactive Protein (Inflammation).</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 1,800</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'ECG/EKG', 2200)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">💓</div>
+                    <h3>ECG / EKG</h3>
+                    <p>Heart rhythm recording.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 2,200</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Rheumatoid Factor', 2200)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🦴</div>
+                    <h3>Rheumatoid Factor</h3>
+                    <p>Arthritis diagnosis.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 2,200</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'HbA1c Test', 2500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🍬</div>
+                    <h3>HbA1c Test</h3>
+                    <p>Avg blood sugar (3 months).</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 2,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Electrolytes', 2500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">⚡</div>
+                    <h3>Electrolytes (SE)</h3>
+                    <p>Sodium, Potassium balance check.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 2,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Dengue Antigen', 2800)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🦟</div>
+                    <h3>Dengue Antigen</h3>
+                    <p>NS1 Rapid Antigen Test.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 2,800</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Pregnancy Test (Beta hCG)', 2800)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🤰</div>
+                    <h3>Pregnancy Test</h3>
+                    <p>Beta hCG hormone test.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 2,800</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'X-Ray Service', 3000)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🦴</div>
+                    <h3>Digital X-Ray</h3>
+                    <p>Chest & bone imaging.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 3,000</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Dengue IgM/IgG', 3500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🦟</div>
+                    <h3>Dengue Antibodies</h3>
+                    <p>Advanced Dengue screening.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 3,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Hearing Test', 3500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">👂</div>
+                    <h3>Audiometry</h3>
+                    <p>Professional hearing test.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 3,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Coagulation Profile', 3800)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🩸</div>
+                    <h3>Coagulation</h3>
+                    <p>PT/INR blood clotting test.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 3,800</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Lipid Profile', 3800)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">❤️</div>
+                    <h3>Lipid Profile</h3>
+                    <p>Cholesterol & heart health.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 3,800</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Lung Function', 4000)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🌬️</div>
+                    <h3>Lung Function</h3>
+                    <p>Spirometry breathing test.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 4,000</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Liver Function Test', 4200)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🧪</div>
+                    <h3>Liver Function</h3>
+                    <p>Liver health evaluation (LFT).</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 4,200</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Iron Studies', 4500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🔩</div>
+                    <h3>Iron Studies</h3>
+                    <p>Anemia and iron deficiency test.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 4,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Kidney Profile', 4500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">💧</div>
+                    <h3>Kidney Profile</h3>
+                    <p>Renal function tests (RFT).</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 4,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'PSA Test', 4500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">👨</div>
+                    <h3>PSA Test</h3>
+                    <p>Prostate cancer screening.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 4,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Vitamin B12', 4500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">💊</div>
+                    <h3>Vitamin B12</h3>
+                    <p>Nerve & blood health.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 4,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Ultrasound Scan', 4800)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🔊</div>
+                    <h3>Ultrasound Scan</h3>
+                    <p>Abdominal & Pelvic imaging.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 4,800</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Thyroid Profile', 5000)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🦋</div>
+                    <h3>Thyroid Profile</h3>
+                    <p>TSH, T3, T4 hormone levels.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 5,000</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Cardiac Enzymes', 5500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">❤️</div>
+                    <h3>Cardiac Enzymes</h3>
+                    <p>Heart attack risk assessment.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 5,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Diabetic Profile', 6000)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🍬</div>
+                    <h3>Diabetic Profile</h3>
+                    <p>HbA1c & Glucose monitoring.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 6,000</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Mammography', 6500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🎀</div>
+                    <h3>Mammography</h3>
+                    <p>Breast health screening.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 6,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'PCR Test', 6500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🧬</div>
+                    <h3>PCR Test</h3>
+                    <p>COVID-19 & viral detection.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 6,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Arthritis Profile', 6800)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🦴</div>
+                    <h3>Arthritis Profile</h3>
+                    <p>Joint health and inflammation.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 6,800</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'STD Screening', 8500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🛡️</div>
+                    <h3>STD Screening</h3>
+                    <p>Confidential sexual health tests.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 8,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Vitamin D', 8500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">☀️</div>
+                    <h3>Vitamin D Total</h3>
+                    <p>Deficiency screening.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 8,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Echocardiogram', 10500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🩺</div>
+                    <h3>Echocardiogram</h3>
+                    <p>Heart structure imaging.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 10,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Vitamins Profile', 12000)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">💊</div>
+                    <h3>Vitamins Profile</h3>
+                    <p>B12, D, and C checks.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 12,000</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Allergy Panel', 12500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🤧</div>
+                    <h3>Allergy Panel</h3>
+                    <p>Common allergen screening.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 12,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Autoimmune Panel', 14000)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">⚕️</div>
+                    <h3>Autoimmune Panel</h3>
+                    <p>ANA & Autoimmune disorders.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 14,000</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Hormone Panel', 15000)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">⚡</div>
+                    <h3>Hormone Panel</h3>
+                    <p>Complete hormonal balance check.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 15,000</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Infertility Profile', 16500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">👶</div>
+                    <h3>Infertility Profile</h3>
+                    <p>Complete reproductive health.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 16,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Tumor Markers', 18000)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🎗️</div>
+                    <h3>Tumor Markers</h3>
+                    <p>Cancer screening panel.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 18,000</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Food Intolerance', 18500)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🥗</div>
+                    <h3>Food Intolerance</h3>
+                    <p>Specific food sensitivity test.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 18,500</div>
+                </div>
+                <div class="service-card" onclick="toggleService(this, 'Full Body Checkup', 25000)">
+                    <div class="check-indicator">✔</div>
+                    <div class="service-icon">🏥</div>
+                    <h3>Full Body Checkup</h3>
+                    <p>Complete health assessment.</p>
+                    <div style="margin-top: 15px; font-weight: 800; color: var(--primary);">LKR 25,000</div>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <div id="wizard-container">
+                <!-- Step 1: Summary -->
+                <div class="wizard-step active" id="step1">
+                    <h2>Book Selected Services</h2>
+                    <p>Review your selection before proceeding.</p>
+                    <div class="summary-box">
+                        <div id="modal-service-summary"
+                            style="max-height: 150px; overflow-y: auto; margin-bottom: 15px; padding-right: 5px;">
+                            <!-- Dynamically populated -->
+                        </div>
+                        <div
+                            style="border-top: 2px dashed #ddd; padding-top: 10px; display: flex; justify-content: space-between; font-size: 1.25rem;">
+                            <span>Total:</span>
+                            <strong id="modal-total-price" style="color: var(--primary);">LKR 0.00</strong>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top: 20px;">
+                        <label>Select Date</label>
+                        <input type="date" id="booking-date" class="form-control" required>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 20px;"
+                        onclick="nextStep(2)">Continue</button>
+                </div>
+
+                <!-- Step 2: Patient Details -->
+                <div class="wizard-step" id="step2">
+                    <h2>Patient Details</h2>
+                    <form onsubmit="event.preventDefault(); nextStep(3);">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="patient-name" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="patient-email" class="form-control" placeholder="john@example.com"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" id="patient-phone" class="form-control" placeholder="+94 77 123 4567"
+                                required>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <div class="form-group" style="flex: 1;">
+                                <label>Age</label>
+                                <input type="number" id="patient-age" class="form-control" placeholder="25" required>
+                            </div>
+                            <div class="form-group" style="flex: 1;">
+                                <label>Gender</label>
+                                <select id="patient-gender" class="form-control" required style="background: white;">
+                                    <option value="">Select</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <textarea id="patient-address" class="form-control" placeholder="123 Main St, City" rows="2"
+                                required></textarea>
+                        </div>
+                        <div class="btn-group" style="display: flex; gap: 10px; margin-top: 20px;">
+                            <button type="button" class="btn" style="flex: 1; border: 1px solid #ddd;"
+                                onclick="prevStep(1)">Back</button>
+                            <button type="submit" class="btn btn-primary" style="flex: 1;">Proceed to Payment</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Step 3: Payment -->
+                <div class="wizard-step" id="step3">
+                    <h2>Payment Method</h2>
+                    <div class="payment-options">
+                        <label class="payment-option selected" onclick="selectPayment('card')">
+                            <input type="radio" name="payment" value="card" checked>
+                            <span>💳 Credit/Debit Card</span>
+                        </label>
+                        <label class="payment-option" onclick="selectPayment('cash')">
+                            <input type="radio" name="payment" value="cash">
+                            <span>🏥 Pay at Lab</span>
+                        </label>
+                    </div>
+
+                    <div id="card-details" style="margin-top: 20px;">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Card Number" maxlength="19">
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" class="form-control" placeholder="MM/YY" style="flex: 1;">
+                            <input type="text" class="form-control" placeholder="CVC" style="flex: 1;">
+                        </div>
+                    </div>
+
+                    <div class="btn-group" style="display: flex; gap: 10px; margin-top: 20px;">
+                        <button type="button" class="btn" style="flex: 1; border: 1px solid #ddd;"
+                            onclick="prevStep(2)">Back</button>
+                        <button type="button" class="btn btn-primary" style="flex: 1;"
+                            onclick="generateInvoice()">Confirm & Pay</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Invoice -->
+                <div class="wizard-step" id="step4">
+                    <div class="success-checkmark">
+                        <div class="check-icon">✓</div>
+                    </div>
+                    <h2 style="text-align: center;">Booking Confirmed!</h2>
+
+                    <div class="invoice">
+                        <div class="invoice-header">
+                            <h3>RECEIPT</h3>
+                            <span id="invoice-id">#INV-0000</span>
+                        </div>
+                        <div class="invoice-body">
+                            <div class="invoice-row">
+                                <span>Invoice ID:</span>
+                                <span id="summ-invoice-id"></span>
+                            </div>
+                            <div class="invoice-row">
+                                <span>Patient:</span>
+                                <span id="summ-name">John Doe</span>
+                            </div>
+                            <div class="invoice-row">
+                                <span>Service:</span>
+                                <span id="summ-service">Blood Test</span>
+                            </div>
+                            <div class="invoice-row" style="align-items: center;">
+                                <span>Verification Code:</span>
+                                <span id="summ-code" class="verification-badge">----</span>
+                            </div>
+                            <div class="invoice-row">
+                                <span>Date:</span>
+                                <span id="summ-date">2026-01-02</span>
+                            </div>
+                            <div class="invoice-divider"></div>
+                            <div class="invoice-row">
+                                <span>Amount:</span>
+                                <span id="summ-price">$25.00</span>
+                            </div>
+                            <div class="invoice-row">
+                                <span>Tax (5%):</span>
+                                <span id="summ-tax">$1.25</span>
+                            </div>
+                            <div class="invoice-row total">
+                                <span>Total:</span>
+                                <span id="summ-total">$26.25</span>
+                            </div>
+                        </div>
+                        <div class="paid-stamp" id="paid-stamp">PAID</div>
+                    </div>
+
+                    <div class="screenshot-alert">
+                        <div class="screenshot-icon">📸</div>
+                        <div style="text-align: left;">
+                            <strong style="display: block; color: var(--primary); margin-bottom: 2px;">Capture This
+                                Receipt</strong>
+                            <span>Please take a <b>screenshot</b> and show it at the reception.</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 20px;"
+                        onclick="closeModal()">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Booking Bar -->
+    <div id="floating-book-bar">
+        <div class="info">
+            <span id="selected-count" class="count">0 Services Selected</span>
+            <span id="selected-total" class="total">LKR 0</span>
+        </div>
+        <button class="btn-book" onclick="openBooking()">Book Now</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

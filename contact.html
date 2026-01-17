@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MediLab Plus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="navbar">
+        <div class="container">
+            <nav>
+                <div class="logo">MediLab+</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div style="display: flex; align-items: center;">
+                    <button class="nav-theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
+                        <span class="icon-sun">☀️</span>
+                        <span class="icon-moon">🌙</span>
+                    </button>
+                    <a href="admin/login.html" class="btn btn-primary">Admin Portal</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contact" style="padding: 150px 0 100px; min-height: 100vh;">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+                <!-- Contact Info -->
+                <div class="glass-card">
+                    <h3 style="margin-bottom: 20px; color: var(--primary);">Contact Information</h3>
+                    <div style="margin-bottom: 20px;">
+                        <strong style="display: block; margin-bottom: 5px;">📍 Head Office</strong>
+                        <p>No. 123, Galle Road, Colombo 03, Sri Lanka.</p>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <strong style="display: block; margin-bottom: 5px;">📞 Phone</strong>
+                        <p>+94 77 172 4969 (General)</p>
+                        <p>+94 77 123 4567 (Hotline)</p>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <strong style="display: block; margin-bottom: 5px;">✉️ Email</strong>
+                        <p>info@medilabplus.lk</p>
+                    </div>
+                    <div>
+                        <strong style="display: block; margin-bottom: 5px;">🕒 Opening Hours</strong>
+                        <p>Mon - Sun: 6:00 AM - 10:00 PM</p>
+                    </div>
+                </div>
+
+                <!-- Map (Placeholder) -->
+                <!-- Location Image -->
+                <div class="glass-card" style="padding: 0; overflow: hidden; min-height: 300px; display: flex;">
+                    <img src="images/location.png"
+                        style="width: 100%; height: 100%; object-fit: cover; min-height: 300px;"
+                        alt="MediLab+ Head Office Location">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
